@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #171b23;
+    --accent-color: #629194;
+    --font-color: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Robot', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+body {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 0.5rem;
+}
+
+#profile-headliner {
+    padding: 0.5rem;
+    display: flex;
+    flex: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#profile-headliner>img {
+    aspect-ratio: 4 / 3;
+    min-width: 0;
+    max-width: 100%;
+    border-radius: 4px 0 0 4px;
+    object-fit: cover;
+}
+
+#profile-headliner>p {
+    line-height: 1.5;
+    font-size: 1.15rem;
+    color: black;
+    background-color: var(--accent-color);
+    margin: 0;
+    padding: 0.8rem;
+    border-radius: 0 4px 4px 0;
+}
+
+section {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
