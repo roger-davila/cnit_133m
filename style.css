@@ -27,7 +27,6 @@ body {
 #profile-headliner {
     padding: 0.5rem;
     display: flex;
-    flex: row;
     justify-content: flex-start;
     align-items: stretch;
     border: 1px solid var(--accent-color);
