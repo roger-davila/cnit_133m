@@ -30,6 +30,8 @@ body {
     flex: row;
     justify-content: flex-start;
     align-items: stretch;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
 }
 
 #profile-headliner>img {
@@ -48,9 +50,4 @@ body {
     margin: 0;
     padding: 0.8rem;
     border-radius: 0 4px 4px 0;
-}
-
-section {
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
 }
