@@ -8,10 +8,11 @@
         content="Learn more about Roger, a curious student currently enrolled in CNIT 133M. Discover his interests and resources he uses daily.">
     <link rel="stylesheet" href="style.css">
     <title>CNIT 133M Biography</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 </head>
 
 <body>
-    <h1>CNIT 133M Mobile Web with HTML and CSS</h1>
+    <h1 id='main-banner'>CNIT 133M Mobile Web with HTML and CSS</h1>
 
     <div id="profile-headliner">
         <img src="profile.png" alt="profile picture">
@@ -23,7 +24,7 @@
     <p>My first love in programming was developing websites. Not to discredit the powerful feeling of making my
         terminal respond back to me with my dingy cli-based apps, but building web applications is incredibly
         satisfying for me. It feels like a blank canvas, filled with possibility.</p>
-
+    <button id="magic-button">Start Animation</button>
     <h2>Technologies for This Class</h2>
     <ul>
         <li>HTML</li>
@@ -45,6 +46,26 @@
                 merging features.</p>
         </li>
     </ul>
+    <script>
+        $(function () {
+            const $mainBanner = $('#main-banner');
+            const $root = $(':root');
+
+            $('#magic-button').click(function () {
+                const bannerFontSize = parseFloat($mainBanner.css('fontSize'));
+                const bannerTextColor = $mainBanner.css('color');
+
+                $mainBanner
+                    .css('color', $root.css('--accent-color-tan'))
+                    .animate({ fontSize: bannerFontSize * 1.35 }, 800)
+                    .animate({ fontSize: bannerFontSize }, 800)
+                    .queue(function (next) {
+                        $(this).css('color', bannerTextColor);
+                        next();
+                    });
+            });
+        });
+    </script>
 </body>
 
 </html>
