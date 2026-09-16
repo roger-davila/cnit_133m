@@ -7,15 +7,15 @@
     <meta name="description"
         content="Learn more about Roger, a curious student currently enrolled in CNIT 133M. Discover his interests and resources he uses daily.">
     <link rel="stylesheet" href="style.css">
-    <title>CNIT 133M Biography</title>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <title>CNIT 133M Biography</title>
 </head>
 
 <body>
-    <h1 id='main-banner'>CNIT 133M Mobile Web with HTML and CSS</h1>
+    <h1 id="main-banner">CNIT 133M Mobile Web with HTML and CSS</h1>
 
     <div id="profile-headliner">
-        <img src="profile.png" alt="profile picture">
+        <img id="profile-picture" src="profile.png" alt="profile picture">
         <p>My name is Roger and I love creating, tinkering, and learning. The process of building can be
             hard, mainly because of how easy it is to get lost in the sauce. It's a constant battle to relinquish the
             weight of perfectionism and just build.</p>
@@ -49,11 +49,15 @@
     <script>
         $(function () {
             const $mainBanner = $('#main-banner');
+            const $profilePicture = $('#profile-picture');
             const $root = $(':root');
 
             $('#magic-button').click(function () {
                 const bannerFontSize = parseFloat($mainBanner.css('fontSize'));
                 const bannerTextColor = $mainBanner.css('color');
+
+                $profilePicture
+                    .css('border', `1px solid ${$root.css('--accent-color').trim()}`);
 
                 $mainBanner
                     .css('color', $root.css('--accent-color-tan'))
