@@ -65,21 +65,21 @@ header {
 
 }
 
-nav {
+.navigation {
     list-style: none;
     /* this removes the bullets from list elements */
     margin-top: 20px;
     /* giving the ul a top margin of 20px */
 }
 
-nav li {
+.navigation li {
     display: inline-block;
     /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
     margin: 0 3px 5px;
     /* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
 }
 
-nav li a {
+.navigation li a {
     background: #4a4a4a;
     /* this is a dark grey background for the link */
     color: #fff;
@@ -94,12 +94,6 @@ nav li a {
     /* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
     text-decoration: none;
     /* this removes the normal underline that links usually have */
-}
-
-nav li a:hover {
-    background-color: #000;
-    /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
-
 }
 
 main {
@@ -165,6 +159,11 @@ footer {
 @media (hover: hover) {
     aside a:hover {
         text-decoration: none
+    }
+
+    .navigation li a:hover {
+        background-color: #000;
+        /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
     }
 }
 
