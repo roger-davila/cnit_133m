@@ -111,17 +111,17 @@ main {
     width: 900px;
 }
 
-aside.col-right {
+article {
     width: 660px
 }
 
-aside.sidebar-left {
+aside {
     width: 200px;
     margin-right: auto;
     /* when floating content next to each other, applying set widths will make the content play nice with each other. Change the width of the siebar, or take away the width of the above "div.col-right" and see what happens to get a better idea of how widths effect floats */
 }
 
-aside.sidebar-left a {
+aside a {
     color: #445e64;
     /* this redefines all links in the left sidebar to this new color, as opposed to the default blue link color */
 }
@@ -163,7 +163,7 @@ footer {
 }
 
 @media (hover: hover) {
-    aside.sidebar-left a:hover {
+    aside a:hover {
         text-decoration: none
     }
 }
@@ -176,8 +176,8 @@ footer {
 
     header,
     main,
-    aside.col-right,
-    aside.sidebar-left,
+    article,
+    aside,
     footer {
         width: 100%;
     }
