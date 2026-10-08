@@ -179,8 +179,8 @@ img {
 
     header,
     main,
-    div.col-right,
-    div.sidebar-left,
+    aside.col-right,
+    aside.sidebar-left,
     footer {
         width: 100%;
     }
