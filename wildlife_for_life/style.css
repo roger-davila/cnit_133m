@@ -126,10 +126,6 @@ aside.sidebar-left a {
     /* this redefines all links in the left sidebar to this new color, as opposed to the default blue link color */
 }
 
-aside.sidebar-left a:hover {
-    text-decoration: none
-}
-
 /* when hovering over a link, in the sidebar, this turns off the underline */
 
 .list {
@@ -160,15 +156,16 @@ footer {
     width: 900px;
 }
 
-.float-left {
-    float: left;
-    /* use this on an element (like an image) to make it float to the left of it's containing HTML element */
-    margin: 0 10px 10px 0;
+.image-text {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 10px;
 }
 
-img {
-    margin: 0 0 10px 10px;
-    /* use this on an element (like an image) to make it float to the right of it's containing HTML element */
+@media (hover: hover) {
+    aside.sidebar-left a:hover {
+        text-decoration: none
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -195,7 +192,25 @@ img {
         padding: 0 0.4rem;
     }
 
-    .float-left {
-        float: none;
+    .image-text {
+        flex-direction: column;
+    }
+
+    img {
+        position: relative;
+        left: 0;
+        animation: moveLeftToRight 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveLeftToRight {
+        from {
+            left: 0;
+            transform: translateX(0);
+        }
+
+        to {
+            left: calc(100% - 200px);
+            transform: translateX(calc(100% - 200px));
+        }
     }
 }
